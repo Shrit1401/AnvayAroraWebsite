@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+@layer components {
+  .navBtn {
+    @apply relative  block font-medium shadow-none text-black z-[5] border-0 rounded-[90px] pr-[35px] pl-[35px] py-[22.5px] px-[22.5px] hover:bg-[white] hover:bg-opacity-80 text-xl hover:text-black transition-all duration-300 ease-in-out;
+  }
+
+  .box {
+    @apply bg-white bg-opacity-50 text-black backdrop-blur-md rounded-lg odd:ml-5 even:mr-5 h-[200px] flex items-center justify-center;
+  }
+}
+
+.line {
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin-bottom: 5px;
+  position: relative;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0;
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.cross-1 {
+  transform: rotate(45deg) translate(2px, 2px);
+  transform-origin: center center;
+}
+
+.cross-2 {
+  transform: rotate(-45deg) translate(3px, -3px);
+  transform-origin: center center;
+}
+
+.navLink {
+  position: relative;
+  display: block;
+  font-family: "Adiue", sans-serif;
+  background: 0 0;
+  box-shadow: none;
+  border: 0;
+  margin: 0;
+  line-height: 2;
+  font-size: clamp(30px, 2.142857142857143vw, 100vw);
+  color: #fff;
+  padding: 0;
+  transition-delay: 0.2s;
+  transition: all 0.7s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.nav-social-link {
+  display: block;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 32px 10px;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #fff;
+}
+
+.grey-lines {
+  height: 100%;
+  width: 1px;
+  background: white;
+  position: fixed;
+  opacity: 0.2;
+  z-index: -1;
+  right: 50%;
+}
+
+.grey-lines:nth-child(2) {
+  height: 100%;
+  width: 1px;
+  background: white;
+  position: fixed;
+  opacity: 0.2;
+  z-index: -1;
+  right: 20%;
+}
+
+.grey-lines:nth-child(3) {
+  height: 100%;
+  width: 1px;
+  background: white;
+  position: fixed;
+  opacity: 0.2;
+  z-index: -1;
+  left: 20%;
+}
+.background-circle {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #000;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  z-index: -1;
+  left: 10%;
+  opacity: 0.2;
+}
+
+.background-circle.right {
+  left: 60%;
+}
